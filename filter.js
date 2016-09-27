@@ -17,13 +17,20 @@ var people = [
 	}
 ];
 
-// Your code here!
+var isCool = people.filter(function (person) {
+	return (person.coolnessScore > 20)
+}).map(function(person){
+	return person.name
+}).sort()
 
-// Write code that uses the filter function, and the below isCool function to return a list of people who are cool.
+var unCool = people.filter(function (person) {
+	return (person.coolnessScore < 20)
+}).map(function(person){
+	return person.name
+}).sort()
 
-var isCool = function(person) {
-	return person.coolnessScore > 20;
-}
+console.log("The cool people are " + isCool)
+console.log("The uncool people are " + unCool)
 
 // Example results:
 //
