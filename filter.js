@@ -17,20 +17,20 @@ var people = [
 	}
 ];
 
-var isCool = people.filter(function (person) {
+var coolPeople = people.filter(function (person) {
 	return (person.coolnessScore > 20)
-}).map(function(person){
-	return person.name
-}).sort()
+})
 
-var unCool = people.filter(function (person) {
+var uncoolPeople = people.filter(function (person) {
 	return (person.coolnessScore < 20)
-}).map(function(person){
-	return person.name
-}).sort()
+})
 
-console.log("The cool people are " + isCool)
-console.log("The uncool people are " + unCool)
+coolPeople.forEach(function (person) {
+	console.log(person.name + " is cool")
+})
+uncoolPeople.forEach(function (person) {
+	console.log(person.name + " is not cool")
+})
 
 // Example results:
 //
