@@ -9,7 +9,7 @@
   {name: "Cottage Cheese", level: "not very"}
 ];
 
-foods.forEAch(function (food){
+foods.forEach(function (food){
   console.log(food.name + " is " + food.level + " delicious")
 })
 
